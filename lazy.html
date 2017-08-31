@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="" href="lazy.css">
+    <script src="./jquery-3.2.1.min.js">
+
+    </script>
+</head>
+
+<body>
+
+    <div id="bb" style="width:220px;height:200px;background:white;position:absolute;left:100px;top:100px;border:2px solid black">
+        <p>
+            hskjdsd dasdd dsadasd dasdsa dasdasdd ddsdsa dasdasfdshfkjsdhfkjshfksh122222222222 dhsjkdhskjdhskajdhasjk dsahjkdhsakj dhasjkdh
+            dashkjdhaskjdh dshajkdhask dshajkdhaskdsahkdjhas dashkjdhaskjdhdhasjkd dsahjkdhsakj dhasjk
+        </p>
+    </div>
+
+
+
+    <div id="cc">
+        31231313 13212312 321312 534654 454545 5434545345 45345345 4554345 54345344 453245345 254345 25445 35434
+    </div>
+</body>
+
+<script>
+    // console.log(document.body.clientWidth);
+    // console.log(document.body.clientHeight);
+    // console.log(document.body.offsetWidth);
+    // console.log(document.body.offsetHeight);
+    var bb = document.getElementById("bb");
+    console.log("页可见宽度" + bb.clientWidth);
+    console.log("页可见区高度" + bb.clientHeight);
+    console.log("页全文宽" + bb.scrollWidth);
+
+    console.log("页全文高" + bb.scrollHeight);
+    console.log("包括边线高度" + bb.offsetHeight);
+    console.log("包括边线宽度" + bb.offsetWidth);
+
+    console.log("网页正文部分上" + window.screenTop);
+    console.log("网页正文部分左" + window.screenLeft);
+    console.log(bb.getBoundingClientRect());
+
+    var winPos = $(window).scrollTop();
+    bb.onmouseover = function () {
+        console.log("被卷区部分上" + bb.scrollTop);
+        console.log("被卷区部分左" + bb.scrollLeft);
+        console.log(winPos);
+    }
+
+</script>
+
+</html>
